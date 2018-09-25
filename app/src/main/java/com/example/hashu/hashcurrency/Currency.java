@@ -11,11 +11,8 @@ public class Currency {
     private Hashtable<String, Double> Rates = new Hashtable<>();
 
     //Constructor
-    public Currency(String name , String fullName ,String symbol ,Hashtable<String,Double> rates){
-        setName(name);
-        setFullName(fullName);
-        setSymbol(symbol);
-        setRates(rates);
+    public Currency(){
+
     }
 
     // Getter and setters
