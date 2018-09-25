@@ -1,52 +1,49 @@
 package com.example.hashu.hashcurrency;
 
-import android.telephony.euicc.EuiccInfo;
-
-import java.nio.file.attribute.UserDefinedFileAttributeView;
 import java.util.HashMap;
 import java.util.Hashtable;
 
 public class CurrencyFactory {
 
-    private static HashMap<String,Currency> Currencies = new HashMap<>();
+    private static HashMap<String,Currency> currencies = new HashMap<>();
 
     public static void addCurrency(){
 
-        Hashtable<String, Double> USD_Rates = new Hashtable<>();
-        USD_Rates.put("PRK",123.7298);
-        USD_Rates.put("EUR",0.8505);
-        USD_Rates.put("GBP",0.7623);
-        USD_Rates.put("CAD",1.2943);
-        Currency USD = new Currency("USD","United States Dollar ","$",USD_Rates);
-        Currencies.put("USD",USD);
+        Hashtable<String, Double> usdRates = new Hashtable<>();
+        usdRates.put("PRK",123.7298);
+        usdRates.put("EUR",0.8505);
+        usdRates.put("GBP",0.7623);
+        usdRates.put("CAD",1.2943);
+        Currency usd = new Currency("USD","United States Dollar ","$",usdRates);
+        currencies.put("USD",usd);
 
-        Hashtable<String, Double> PRK_Rates = new Hashtable<>();
-        PRK_Rates.put("USD",0.0081);
-        PRK_Rates.put("EUR",0.0069);
-        PRK_Rates.put("GBP",0.0062);
-        PRK_Rates.put("CAD",0.0105);
-        Currency PRK = new Currency("PRK","Pakistani Rupees","Rs",PRK_Rates);
-        Currencies.put("PRK",PRK);
+        Hashtable<String, Double> prkRates = new Hashtable<>();
+        prkRates.put("USD",0.0081);
+        prkRates.put("EUR",0.0069);
+        prkRates.put("GBP",0.0062);
+        prkRates.put("CAD",0.0105);
+        Currency prk = new Currency("PRK","Pakistani Rupees","Rs",prkRates);
+        currencies.put("PRK",prk);
 
-        Hashtable<String, Double> EUR_Rates = new Hashtable<>();
-        EUR_Rates.put("USD",1.1757);
-        EUR_Rates.put("PRK",145.4708);
-        EUR_Rates.put("GBP",0.8962);
-        EUR_Rates.put("CAD",1.5217);
-        Currency EUR = new Currency("EUR","Euro","€",EUR_Rates);
-        Currencies.put("EUR",EUR);
+        Hashtable<String, Double> eurRates = new Hashtable<>();
+        eurRates.put("USD",1.1757);
+        eurRates.put("PRK",145.4708);
+        eurRates.put("GBP",0.8962);
+        eurRates.put("CAD",1.5217);
+        Currency eur = new Currency("EUR","Euro","€",eurRates);
+        currencies.put("EUR",eur);
 
-        Hashtable<String, Double> CAD_Rates = new Hashtable<>();
-        CAD_Rates.put("USD",0.7726);
-        CAD_Rates.put("PRK",95.5948);
-        CAD_Rates.put("GBP",0.5889);
-        CAD_Rates.put("EUR",0.6571);
-        Currency CAD = new Currency("CAD","Canadian Dollar","",CAD_Rates);
-        Currencies.put("CAD", CAD);
+        Hashtable<String, Double> cadRates = new Hashtable<>();
+        cadRates.put("USD",0.7726);
+        cadRates.put("PRK",95.5948);
+        cadRates.put("GBP",0.5889);
+        cadRates.put("EUR",0.6571);
+        Currency cad = new Currency("CAD","Canadian Dollar","",cadRates);
+        currencies.put("CAD", cad);
     }
 
     public static HashMap<String, Currency> getCurrencies() {
         addCurrency();
-        return Currencies;
+        return currencies;
     }
 }
