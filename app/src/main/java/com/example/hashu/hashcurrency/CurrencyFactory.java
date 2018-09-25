@@ -6,16 +6,16 @@ import java.nio.file.attribute.UserDefinedFileAttributeView;
 import java.util.HashMap;
 import java.util.Hashtable;
 
-public class CurrencyBuilder {
+public class CurrencyFactory {
 
-    private HashMap<String,Currency> Currencies = new HashMap<>();
+    private static HashMap<String,Currency> Currencies = new HashMap<>();
 
-    public CurrencyBuilder (){
+    public CurrencyFactory(){
         addCurrency();
 
     }
 
-    public void addCurrency(){
+    public static void addCurrency(){
 
         Hashtable<String, Double> USD_Rates = new Hashtable<>();
         USD_Rates.put("PRK",123.7298);
@@ -66,7 +66,7 @@ public class CurrencyBuilder {
         Currencies.put("CAD", CAD);
     }
 
-    public HashMap<String, Currency> getCurrencies() {
+    public static HashMap<String, Currency> getCurrencies() {
         return Currencies;
     }
 }

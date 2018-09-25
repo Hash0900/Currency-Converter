@@ -4,9 +4,9 @@ import java.util.HashMap;
 
 public class Converter {
     //Data Members
-    private Double convertedAmount;
+    private static Double convertedAmount;
     private String symbol;
-    private HashMap<String,Currency> currencies = new HashMap<>();
+    private static HashMap<String,Currency> currencies = new HashMap<>();
 
     //Constructor
     public Converter(){
@@ -28,12 +28,11 @@ public class Converter {
     }
 
     //Functions
-    public Double convertCurrency(String convertFrom , String convertTo , Double amount){
+    public static Double convertCurrency(String convertFrom, String convertTo, Double amount){
 
-        CurrencyBuilder builder = new CurrencyBuilder();
+        CurrencyFactory builder = new CurrencyFactory();
         currencies = builder.getCurrencies();
-        Currency fromCurrency = new Currency();
-        fromCurrency =currencies.get(convertFrom);
+        Currency fromCurrency = currencies.get(convertFrom);
         Double rate = fromCurrency.getRates().get(convertTo);
         convertedAmount = amount*rate ;
         return convertedAmount;

@@ -12,7 +12,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Converter converter  = new Converter();
 
-        Double result = converter.convertCurrency("USD","PRK",1.000);
+        Double result = converter.convertCurrency("USD","PRK",10.000);
 
         Toast.makeText(this, "RS --> "+ result, Toast.LENGTH_SHORT).show();
 
