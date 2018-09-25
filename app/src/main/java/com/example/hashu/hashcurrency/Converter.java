@@ -28,8 +28,8 @@ public class Converter {
     }
 
     //Functions
-    public static Double convertCurrency(String convertFrom, String convertTo, Double amount){
 
+    public static Double convertCurrency(String convertFrom, String convertTo, Double amount){
         CurrencyFactory builder = new CurrencyFactory();
         currencies = builder.getCurrencies();
         Currency fromCurrency = currencies.get(convertFrom);

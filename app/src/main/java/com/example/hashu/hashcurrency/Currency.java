@@ -1,18 +1,20 @@
 package com.example.hashu.hashcurrency;
 
-import java.util.HashSet;
 import java.util.Hashtable;
 
 public class Currency {
     //Data Members
     private String name;
     private String fullName;
-    private String Symbol;
-    private Hashtable<String, Double> Rates = new Hashtable<>();
+    private String symbol;
+    private Hashtable<String, Double> rates = new Hashtable<>();
 
     //Constructor
-    public Currency(){
-
+    public Currency(String name , String fullName , String symbol , Hashtable<String, Double> rates){
+        setName(name);
+        setFullName(fullName);
+        setSymbol(symbol);
+        setRates(rates);
     }
 
     // Getter and setters
@@ -33,19 +35,19 @@ public class Currency {
     }
 
     public String getSymbol() {
-        return Symbol;
+        return symbol;
     }
 
     public void setSymbol(String symbol) {
-        Symbol = symbol;
+        this.symbol = symbol;
     }
 
     public Hashtable<String, Double> getRates() {
-        return Rates;
+        return rates;
     }
 
     public void setRates(Hashtable<String, Double> rates) {
-        Rates = rates;
+        this.rates = rates;
     }
 
 }
