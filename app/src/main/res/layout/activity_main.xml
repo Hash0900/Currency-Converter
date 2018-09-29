@@ -3,39 +3,15 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="#f8f8ff"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
-
-
-    <!--<RelativeLayout-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="wrap_content">-->
-        <!--<TextView-->
-            <!--android:id="@+id/tvCurrencyName"-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:text="Currency Name "/>-->
-        <!--<TextView-->
-            <!--android:id="@+id/tvCurrencyFullName"-->
-            <!--android:layout_below="@+id/tvCurrencyName"-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:text="Currency Full Name "/>-->
-        <!--<EditText-->
-            <!--android:id="@+id/etAmount"-->
-            <!--android:layout_toRightOf="@+id/tvCurrencyFullName"-->
-            <!--android:layout_width="200dp"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:inputType="number"/>-->
-
-    <!--</RelativeLayout>-->
 
 <android.support.v7.widget.RecyclerView
     android:id="@+id/rvCurrency"
     android:scrollbars="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
+    android:layout_height="wrap_content">
 </android.support.v7.widget.RecyclerView>
 
 </RelativeLayout>

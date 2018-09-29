@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<android.support.v7.widget.CardView
+    android:layout_marginTop="20dp"
+    android:layout_margin="10dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="10dp">
+    <RelativeLayout
+        android:id="@+id/rlBackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_margin="6dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/ivCurrencyImage"
+            android:layout_width="50dp"
+            android:layout_height="50dp" />
+        <TextView
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/ivCurrencyImage"
+            android:id="@+id/tvCurrencyName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="USD " />
+
+        <TextView
+            android:textColor="#000000"
+            android:layout_marginTop="5dp"
+            android:textSize="11dp"
+            android:layout_toRightOf="@id/ivCurrencyImage"
+            android:id="@+id/tvCurrencyFullName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvCurrencyName"
+            android:text="United States DoIIar" />
+
+        <EditText
+            android:visibility="invisible"
+            android:textAlignment="textEnd"
+            android:backgroundTint="#ffffff"
+            android:textSize="18dp"
+            android:id="@+id/etAmount"
+            android:layout_width="262dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="27dp"
+            android:layout_marginRight="0dp"
+            android:layout_toLeftOf="@+id/ivInputIcon"
+            android:layout_toRightOf="@+id/tvCurrencyFullName"
+            android:inputType="numberDecimal"
+            android:gravity="end" />
+        <ImageView
+            android:visibility="invisible"
+            android:layout_marginTop="5dp"
+            android:layout_alignParentRight="true"
+            android:id="@+id/ivInputIcon"
+            android:src="@drawable/ic_dialpad_blue_a100_24dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="5dp"
+            android:id="@+id/tvAmount"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="100.00"
+            android:textSize="20dp" />
+        <TextView
+            android:textColor="#000000"
+
+            android:textSize="11dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="5dp"
+            android:id="@+id/tvRate"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/tvAmount"
+            android:text="USD= 123.000"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+    </RelativeLayout>
+</android.support.v7.widget.CardView>
+</RelativeLayout>

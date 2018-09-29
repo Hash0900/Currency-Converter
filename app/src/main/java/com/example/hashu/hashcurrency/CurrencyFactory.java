@@ -5,10 +5,8 @@ import java.util.Hashtable;
 
 public class CurrencyFactory {
 
-    private static HashMap<String,Currency> currencies = new HashMap<>();
-
-    public static void addCurrency(){
-
+    public static HashMap<String, Currency> getCurrencies() {
+        HashMap<String,Currency> currencies = new HashMap<>();
         Hashtable<String, Double> usdRates = new Hashtable<>();
         usdRates.put("PRK",123.7298);
         usdRates.put("EUR",0.8505);
@@ -38,12 +36,9 @@ public class CurrencyFactory {
         cadRates.put("PRK",95.5948);
         cadRates.put("GBP",0.5889);
         cadRates.put("EUR",0.6571);
-        Currency cad = new Currency("CAD","Canadian Dollar","",cadRates);
+        Currency cad = new Currency("CAD","Canadian Dollar","$",cadRates);
         currencies.put("CAD", cad);
-    }
 
-    public static HashMap<String, Currency> getCurrencies() {
-        addCurrency();
         return currencies;
     }
 }
